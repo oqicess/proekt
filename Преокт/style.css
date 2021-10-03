@@ -1,0 +1,204 @@
+/*Файл со стилями для модальных окон*/
+@font-face {
+    font-family: 'LCDNova';
+    src: url('fonts/ofont.ru_a_LCDNova.eot');
+    src: local('☺'), url('fonts/ofont.ru_a_LCDNova.woff') format('woff'), url('fonts/ofont.ru_a_LCDNova.ttf') format('truetype'), url('fonts/ofont.ru_a_LCDNova.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-window-enter,
+.modal-window-registration,
+.recovery-password {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #282828;
+    font-family: 'LCDNova';
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0 60px;
+    color: white;
+    font-size: 12px;
+    position: relative;
+    top: 22%;
+    z-index: 5;
+    background-image: url(images/Moadl.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.modal-window-enter {
+    display: none;
+    flex-direction: column;
+    height: 50%;
+}
+
+.modal-window__title {
+    font-size: 28px;
+    margin: 20px 0 30px;
+}
+
+.modal-window-enter__content {
+    flex-grow: 1;
+}
+
+.modal-window-enter__registration {
+    padding-bottom: 20px;
+}
+
+.modal-window__name,
+.modal-window__password,
+.modal-window__email {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    border: 0;
+    border-bottom: 3px solid white;
+    font-size: 17px;
+    padding: 10px 15px 20px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    caret-color: white;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.modal-window__btn {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    /*border: 3px solid white;*/
+    color: white;
+    background-color: #42d08a;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    transition: background-color 1s, color 1s;
+}
+
+.modal-window__btn:hover {
+    cursor: pointer;
+    /*background-color: #42d08a;
+    color: white;*/
+}
+
+.modal-window-enter__block-remember {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-window-enter__password-forgot:hover {
+    cursor: pointer;
+}
+
+.modal-window-enter__link:hover {
+    animation: modal-window-enter__link 1s infinite alternate;
+    cursor: pointer;
+}
+.modal-window-registration {
+    display: none;
+    height: 56%;
+}
+
+.recovery-password {
+    display: none;
+    height: 30%;
+    top: 35%;
+}
+
+.wrapper-modal {
+    background-color: #282828;
+    opacity: .6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 3;
+}
+
+
+.modal-window-enter__block-remember-me {
+     display: flex;
+}
+
+.modal-window-enter__checkbox {
+    align-self: center;
+}
+
+.modal-window-enter__text {
+    align-self: center;
+}
+/*конец*/
+
+/*Файл со стилями для кнопки и холодильника*/
+.main-block {
+    word-spacing: -.36em;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -15%;
+}
+
+.main-block__left-img, .main-block__right-img {
+    word-spacing: normal;
+    height: 100%;
+    width: 50%;
+}
+
+/*Кнопка main*/
+.main-btn {
+    position: absolute;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(245,245,245);
+    /*text-shadow: 0 -7px rgba(0,0,0,.1);*/
+    top: 20%;
+    left: 12%;
+    user-select: none; /*разрешает/запрещает выделение текста*/
+    padding: 14px 20px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background: #2b3037 linear-gradient(#2b3037, #2b3037);
+    box-shadow: inset #2b3037 0 -1px 1px, inset 0 1px 1px #2b3037, #2b3037 0 0 0 1px, rgba(0,0,0,.3) 0 2px 5px;
+    animation: pulsate 3s linear infinite;
+  }
+.main-btn:hover {
+      animation-play-state: paused;
+      cursor: pointer;
+    }
+.main-btn:active {
+      top: 21%;
+      color: #fff;
+      text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;
+      box-shadow: 0 -1px 3px rgba(0,0,0,.3), 0 1px 1px #fff, inset 0 1px 2px rgba(0,0,0,.8), inset 0 -1px 0 rgba(0,0,0,.05);
+    }
+@keyframes pulsate {
+      50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+    }
+/*Конец*/
+
+/*Анимация открытия холодоса*/
+.main-block__open-left {
+    transition: all 3s;
+    transform: rotateY(90deg);
+    transform-origin: 0 50%;
+}
+
+.main-block__open-right {
+    transition: all 3s;
+    transform: rotateY(-90deg);
+    transform-origin: 100% 50%;
+}

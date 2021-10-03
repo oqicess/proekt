@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolodoS</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <!--Кнопнка и холодос-->
+    <div class="main-block">
+        <button class="main-btn">
+            Войти
+        </button>
+        <img src="images/hold_03.jpg" alt="left door" class="main-block__left-img">
+        <img src="images/hold_04.jpg" alt="right door" class="main-block__right-img">
+    </div>
+    <!--Конец-->
+
+    <!--Модальные окна-->
+    <div class="modal-window-enter">
+        <h2 class="modal-window__title">
+            SIGN IN
+        </h2>
+        <div class="modal-window-enter__content">
+            <input type="text" class="modal-window__name modal-window-enter__name" placeholder="Name">
+            <input type="password" class="modal-window__password modal-window-enter__password" 
+                placeholder="Password">
+            <div class="modal-window__btn modal-window-enter__btn">
+                SIGN IN
+            </div>
+            <div class="modal-window-enter__block-remember">
+                <div class="modal-window-enter__block-remember-me">
+                    <input type="checkbox" class="modal-window-enter__checkbox">
+                    <span class="modal-window-enter__text">Запомнить меня</span>
+                </div>
+                <span class="modal-window-enter__password-forgot">Забыли пароль?</span>
+            </div>
+        </div>
+        <div class="modal-window-enter__registration">
+            Нет аккаунта? <span class="modal-window-enter__link">Зарегистируйтесь</span>
+        </div>
+    </div>
+
+    <div class="modal-window-registration">
+        <h2 class="modal-window__title">
+            Регистрация
+        </h2>
+        <div class="modal-window-registration__content">
+            <input type="text" class="modal-window__name modal-window-registration__name" placeholder="Введите Имя">
+            <input type="password" class="modal-window__password modal-window-registration__password"
+                placeholder="Введите пароль">
+            <input type="password" class="modal-window__password modal-window-registration__repeat-password"
+                placeholder="Повторите пароль">
+            <input type="email" class="modal-window__email modal-window-registration__email"
+                placeholder="Введите свой email">
+            <div class="modal-window__btn modal-window-registration__btn">
+                Зарегистрироваться
+            </div>
+        </div>
+    </div>
+
+    <div class="recovery-password">
+        <h2 class="modal-window__title">
+            Восстановление доступа
+        </h2>
+        <input type="email" class="modal-window__email modal-window-registration__email"
+            placeholder="Введите свой email">
+        <div class="modal-window__btn recovery-password__btn">
+            Продолжить
+        </div>
+    </div>
+    <!--Конец-->
+    <script src="script.js"></script>
+</body>
+
+</html>
